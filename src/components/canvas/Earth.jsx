@@ -4,10 +4,13 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 
 import CanvasLoader from "../Loader"
 
-const earth = useGLTF('./planet/scene.gltf')
 const Earth = () => {
+  const earth = useGLTF('./planet/scene.gltf')
   return (
-    <div>Earth</div>
+    <primitive 
+      object={earth.scene}
+    />
+
   )
 }
 
