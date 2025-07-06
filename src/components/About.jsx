@@ -42,17 +42,14 @@ const About = () => {
         variants={fadeIn("","",0.1,1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a software developer with experience in 
-        multiple different languages, frameworks, etc
-        blahblahblahblahplaceholderplaceholderlaceholder
-        laceholderlaceholderlaceholderlaceholderlaceholder
-        laceholderlaceholderlaceholderlaceholderlaceholder
-        placeholderplaceholderplaceholderplaceholderplaceho
-        placeholderplaceholderplaceholderplaceholderplaceholder
-        placeholderplaceholderplaceholderplaceholderplaceholder
-        placeholderplaceholderplaceholderplaceholderplaceholder
-        placeholderplaceholderplaceholderplaceholderplaceholder
-
+        I’m a Computer Science & Mathematics major who loves turning everyday problems 
+        into working software. My toolkit ranges from Python, Java, C/C++, and SQL to HTML, 
+        JavaScript, and the React/Node stack, and I’m comfortable reaching for TensorFlow, AWS,
+         or Azure when the project calls for it. I’ve shipped chatbots, JavaFX apps, and real-time
+          dashboards, always aiming for code that’s as clean for tomorrow’s developer (often future me) as it is fast 
+          for today’s user. Whether I’m building a MERN-style web app or training a model, I focus 
+          on choosing the right tools and delivering a product that feels smooth to use and easy to
+          maintain. 
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

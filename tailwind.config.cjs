@@ -20,6 +20,8 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
+        "constellations-pattern": "url('/src/assets/testbg.png')",
+
       },
     },
   },
