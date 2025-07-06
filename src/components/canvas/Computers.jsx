@@ -1,31 +1,56 @@
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "../Loader";
+import {
+  OrbitControls,
+  Preload,
+  useGLTF,
+  useHelper,
+  Html,
+  useProgress,
+} from "@react-three/drei";
+import { SpotLightHelper } from "three";
 
-/* --------------------------------- */
-const desktop = { camera: [0, 2.8, 11], spot: [2, 8, 6] };
-const mobile  = { camera: [0, 2.4, 15], spot: [2, 7, 9] };
+const CanvasLoader = () => {
+  const { progress } = useProgress();
+  return (
+    <Html center>
+      <span className="canvas-loader" />
+      <p style={{ color: "#fff", marginTop: 20 }}>{progress.toFixed(0)} %</p>
+    </Html>
+  );
+};
+
+const desktop = { camera: [0, 2.8, 11] };
+const mobile = { camera: [0, 2.4, 15] };
 
 const desktopModel = { pos: [0.7, -2.2, 0], rot: [-0.2, -1.5, 0], scale: 0.55 };
-const mobileModel  = { pos: [0.5, -2.2, 0], rot: [-0.2, -1.4, 0], scale: 0.50 };
-/* ------------------------------------------------------- */
+const mobileModel = { pos: [0.5, -2.2, 0], rot: [-0.2, -1.4, 0], scale: 0.5 };
 
-const Computers = ({ spotPos, model }) => {
+const Computers = ({ model }) => {
   const { scene } = useGLTF("/desktop_pc/scene.gltf");
+  const spotRef = useRef();
+
+  useEffect(() => {
+    if (!spotRef.current) return;
+    spotRef.current.target.position.set(0, -1, 0);
+    spotRef.current.target.updateMatrixWorld();
+  }, []);
 
   return (
     <>
       <ambientLight intensity={0.3} />
       <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
-        position={[spotPos[0], spotPos[1], spotPos[2] + 1]}
-        angle={0.3}
-        penumbra={0.5}
-        intensity={2}
+        ref={spotRef}
+        position={[2, 6, 6]}
+        angle={0.35}
+        penumbra={0.2}
+        intensity={80}
+        distance={120}
+        decay={2}
+        color="#ffffff"
         castShadow
       />
-
       <primitive
         object={scene}
         scale={model.scale}
@@ -35,7 +60,6 @@ const Computers = ({ spotPos, model }) => {
     </>
   );
 };
-/* ------------------------------------------------------- */
 
 const SetCamera = ({ pos }) => {
   const { camera } = useThree();
@@ -46,28 +70,18 @@ const SetCamera = ({ pos }) => {
   return null;
 };
 
-/* -------------- Canvas wrapper ------------------------- */
 const ComputersCanvas = () => {
-  const isMobile =
-    typeof window !== "undefined" && window.innerWidth < 768;
-
-  const camPos  = isMobile ? mobile.camera  : desktop.camera;
-  const spotPos = isMobile ? mobile.spot    : desktop.spot;
-  const model   = isMobile ? mobileModel    : desktopModel;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const camPos = isMobile ? mobile.camera : desktop.camera;
+  const model = isMobile ? mobileModel : desktopModel;
 
   return (
-    <Canvas
-      shadows
-      camera={{ fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
+    <Canvas shadows camera={{ fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
       <SetCamera pos={camPos} />
-
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Computers spotPos={spotPos} model={model} />
+        <Computers model={model} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
