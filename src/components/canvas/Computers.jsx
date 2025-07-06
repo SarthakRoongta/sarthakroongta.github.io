@@ -1,48 +1,76 @@
-import { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import CanvasLoader from '../Loader';
+import { Suspense, useEffect } from "react";
+import { Canvas, useThree } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import CanvasLoader from "../Loader";
 
-const Computers = () => {
-  const { scene } = useGLTF('/desktop_pc/scene.gltf');   // absolute path
+/* --------------------------------- */
+const desktop = { camera: [0, 2.8, 11], spot: [2, 8, 6] };
+const mobile  = { camera: [0, 2.4, 15], spot: [2, 7, 9] };
+
+const desktopModel = { pos: [0.7, -2.2, 0], rot: [-0.2, -1.5, 0], scale: 0.55 };
+const mobileModel  = { pos: [0.5, -2.2, 0], rot: [-0.2, -1.4, 0], scale: 0.50 };
+/* ------------------------------------------------------- */
+
+const Computers = ({ spotPos, model }) => {
+  const { scene } = useGLTF("/desktop_pc/scene.gltf");
 
   return (
     <>
+      <ambientLight intensity={0.3} />
       <hemisphereLight intensity={0.15} groundColor="black" />
-      <pointLight intensity={1} />
       <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
+        position={[spotPos[0], spotPos[1], spotPos[2] + 1]}
+        angle={0.3}
+        penumbra={0.5}
+        intensity={2}
         castShadow
-        shadow-mapSize={1024}
       />
+
       <primitive
         object={scene}
-        position={[-3.5, -4.25, -2.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={model.scale}
+        position={model.pos}
+        rotation={model.rot}
       />
     </>
   );
 };
+/* ------------------------------------------------------- */
 
-const ComputersCanvas = () => (
-  <Canvas
-    shadows
-    camera={{ position: [20, 3, 5], fov: 25 }}
-    gl={{ preserveDrawingBuffer: true }}
-  >
-    <Suspense fallback={<CanvasLoader />}>
-      <OrbitControls
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-      />
-      <Computers />
-    </Suspense>
-    <Preload all />
-  </Canvas>
-);
+const SetCamera = ({ pos }) => {
+  const { camera } = useThree();
+  useEffect(() => {
+    camera.position.set(...pos);
+    camera.lookAt(0, 0, 0);
+  }, [camera, pos]);
+  return null;
+};
+
+/* -------------- Canvas wrapper ------------------------- */
+const ComputersCanvas = () => {
+  const isMobile =
+    typeof window !== "undefined" && window.innerWidth < 768;
+
+  const camPos  = isMobile ? mobile.camera  : desktop.camera;
+  const spotPos = isMobile ? mobile.spot    : desktop.spot;
+  const model   = isMobile ? mobileModel    : desktopModel;
+
+  return (
+    <Canvas
+      shadows
+      camera={{ fov: 25 }}
+      gl={{ preserveDrawingBuffer: true }}
+    >
+      <SetCamera pos={camPos} />
+
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls enableZoom={false} />
+        <Computers spotPos={spotPos} model={model} />
+      </Suspense>
+
+      <Preload all />
+    </Canvas>
+  );
+};
 
 export default ComputersCanvas;
