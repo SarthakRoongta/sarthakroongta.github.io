@@ -13,8 +13,8 @@ const CanvasLoader = () => {
   );
 };
 
-const desktop = { camera: [0, 2.8, 11] };
-const mobile = { camera: [0, 2.4, 15] };
+const desktop = { camera: [0, 2.8, 15] };
+const mobile = { camera: [0, 2.4, 20] };
 
 const desktopModel = { pos: [0.7, -2.2, 0], rot: [-0.2, -1.5, 0], scale: 0.55 };
 const mobileModel = { pos: [0.5, -2.2, 0], rot: [-0.2, -1.4, 0], scale: 0.5 };
