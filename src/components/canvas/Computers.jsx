@@ -1,14 +1,6 @@
 import { Suspense, useEffect, useRef } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import {
-  OrbitControls,
-  Preload,
-  useGLTF,
-  useHelper,
-  Html,
-  useProgress,
-} from "@react-three/drei";
-import { SpotLightHelper } from "three";
+import { OrbitControls, Preload, useGLTF, Html, useProgress } from "@react-three/drei";
 
 const CanvasLoader = () => {
   const { progress } = useProgress();
@@ -21,19 +13,18 @@ const CanvasLoader = () => {
 };
 
 const desktop = { camera: [0, 2.8, 11] };
-const mobile = { camera: [0, 2.4, 15] };
+const mobile  = { camera: [1.2, 2.6, 18] };                 // ← farther & shifted right
 
 const desktopModel = { pos: [0.7, -2.2, 0], rot: [-0.2, -1.5, 0], scale: 0.55 };
-const mobileModel = { pos: [0.5, -2.2, 0], rot: [-0.2, -1.4, 0], scale: 0.5 };
+const mobileModel  = { pos: [1.0, -2.4, 0], rot: [-0.2, -1.5, 0], scale: 0.44 }; // ← right & smaller
 
 const Computers = ({ model }) => {
   const { scene } = useGLTF("/desktop_pc/scene.gltf");
-  const spotRef = useRef();
+  const light    = useRef();
 
   useEffect(() => {
-    if (!spotRef.current) return;
-    spotRef.current.target.position.set(0, -1, 0);
-    spotRef.current.target.updateMatrixWorld();
+    light.current.target.position.set(0, -1, 0);
+    light.current.target.updateMatrixWorld();
   }, []);
 
   return (
@@ -41,22 +32,16 @@ const Computers = ({ model }) => {
       <ambientLight intensity={0.3} />
       <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
-        ref={spotRef}
+        ref={light}
         position={[2, 6, 6]}
         angle={0.35}
         penumbra={0.2}
         intensity={80}
         distance={120}
         decay={2}
-        color="#ffffff"
         castShadow
       />
-      <primitive
-        object={scene}
-        scale={model.scale}
-        position={model.pos}
-        rotation={model.rot}
-      />
+      <primitive object={scene} scale={model.scale} position={model.pos} rotation={model.rot} />
     </>
   );
 };
@@ -72,8 +57,8 @@ const SetCamera = ({ pos }) => {
 
 const ComputersCanvas = () => {
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  const camPos = isMobile ? mobile.camera : desktop.camera;
-  const model = isMobile ? mobileModel : desktopModel;
+  const camPos   = isMobile ? mobile.camera  : desktop.camera;
+  const model    = isMobile ? mobileModel    : desktopModel;
 
   return (
     <Canvas shadows camera={{ fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
