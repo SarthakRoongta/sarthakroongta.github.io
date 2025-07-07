@@ -6,6 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import startup from "./startup.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -25,12 +26,17 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import TKD from "./company/TKD.png"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import mobilealt from "./mobilealt.png"
+
 
 export {
+  startup,
+  mobilealt,
   logo,
   backend,
   creator,
@@ -59,4 +65,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  TKD,
 };

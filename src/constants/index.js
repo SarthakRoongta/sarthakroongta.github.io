@@ -2,6 +2,7 @@ import {
   mobile,
   backend,
   creator,
+  mobilealt,
   web,
   javascript,
   typescript,
@@ -23,6 +24,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  startup,
+  TKD,
 } from "../assets";
 
 export const navLinks = [
@@ -52,11 +55,15 @@ const services = [
   },
   {
     title: "React Native Developer",
-    icon: mobile,
+    icon: mobilealt,
   },
   {
     title: "Backend Developer",
     icon: backend,
+  },
+  {
+    title: "Co-Founder & Technology Officer",
+    icon: startup,             
   },
 ];
 
@@ -117,10 +124,10 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
+    title: "Senior Taekwondo Instructor",
+    company_name: "Black K. Taekwondo",
+    icon: TKD,
+    iconBg: "#ffffff",
     date: "March 2020 - April 2021",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
