@@ -68,13 +68,10 @@ const Works = () => {
         variants = {fadeIn("","",0.1,1)}
         className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          The following projects showcase my skills
-          and experience thorugh real-world examples
-          of my work. Each project is briefly 
-          described with links to code repositories
-          and descriptions. It reflects my ability to 
-          solve complex problems, work with different
-          technologies, and manage projects effectively.
+          These projects demonstrate my skills and experience through real-world work. 
+          Each one includes a concise overview and a link to the source code or in progress, 
+          highlighting my ability to tackle complex problems, master diverse 
+          technologies, and manage projects end-to-end.
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">

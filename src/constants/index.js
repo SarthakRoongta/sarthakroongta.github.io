@@ -22,6 +22,7 @@ import {
   shopify,
   carrent,
   jobit,
+  sql,
   tripguide,
   threejs,
   startup,
@@ -92,13 +93,13 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Swift",
-    icon: swift
+    name: "SQL",
+    icon: swift,
   },
-  // {
-  //   name: "Redux Toolkit",
-  //   icon: redux,
-  // },
+  {
+    name: "SQL",
+    icon: sql
+  },
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -119,14 +120,6 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  // {
-  //   name: "figma",
-  //   icon: figma,
-  // },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
 ];
 
 const experiences = [
