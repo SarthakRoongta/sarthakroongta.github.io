@@ -26,6 +26,7 @@ import {
   threejs,
   startup,
   TKD,
+  rutgers
 } from "../assets";
 
 export const navLinks = [
@@ -128,25 +129,24 @@ const experiences = [
     company_name: "Black K. Taekwondo",
     icon: TKD,
     iconBg: "#ffffff",
-    date: "March 2020 - April 2021",
+    date: "Jan 2022 - June 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      
+      "Lead regular classes through warmups and stretching, as well as individually correcting students on form throughout classes.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Collaborating with Adapted teaching techniques to accommodate students of various ages and skill levels, ensuring apositive and eﬀective learning environment.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Undergraduate Research Assistant",
+    company_name: "Rutgers Computer Science Department",
+    icon: rutgers,
+    iconBg: "#ffffff",
+    date: "Jan 2024 - June 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Fine-tuned language models using OpenAI’s API to assist researchers in utilizing the Mathematica package xAct, empowering users to generate code the user needs without prior knowledge of the package or how to use it, making it accessible to users of differing skill levels.",
+      "Adapted DeepMind’s AlphaGeometry code in a virtual Linux environment by updating packages and dependencies that no longer worked.",
+      "Collaborated with students and professors from multiple universities to create new questions to feed to the AlphaGeometry model. ",
     ],
   },
   {

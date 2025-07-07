@@ -27,6 +27,8 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import TKD from "./company/TKD.png"
+import rutgers from "./company/rutgers-r.png"
+
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -66,4 +68,5 @@ export {
   jobit,
   tripguide,
   TKD,
+  rutgers,
 };
