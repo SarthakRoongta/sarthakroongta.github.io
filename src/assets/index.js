@@ -7,6 +7,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import startup from "./startup.png"
+import pokeball from "./pokeball.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -44,6 +45,7 @@ import mobilealt from "./mobilealt.png"
 
 export {
   lingotranslate,
+  pokeball,
   startup,
   mobilealt,
   logo,

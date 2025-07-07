@@ -1,26 +1,30 @@
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
+import {
+  About, Contact, Experience, Hero, Navbar,
+  Tech, Works, StarsCanvas,
+} from "./components";
+import { ThemeProvider } from "./theme/ThemeContext";
 
-import {About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas} from "./components";
-
-const App = () => {
-  return (
+const App = () => (
+  <ThemeProvider>
     <BrowserRouter>
-    <div className = "relative z-0 bg-primary">
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-        <Navbar />
-        <Hero />
-      </div>
-      <About />
-      <Experience />
-      <Tech />
-      <Works />
-      <div className = "relative z-0">
-        <Contact />
-        <StarsCanvas />
-      </div>
-    </div>
-    </BrowserRouter>
-  )
-}
+      <div className="relative z-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <Navbar />          {/* ← no props necessary now */}
+          <Hero />
+        </div>
 
-export default App
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
+      </div>
+    </BrowserRouter>
+  </ThemeProvider>
+);
+
+export default App;

@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .poke-bg   { @apply bg-[#CC0000]; }   /* red */
+  .poke-text { @apply text-[#2A75BB]; } /* blue */
+
+  /* ---- Pokémon theme overrides ---- */
+  .pokemon nav.navbar           { @apply poke-bg; }
+  .pokemon nav.navbar *         { @apply text-white; }   /* links, icons, etc. */
+
+  /* optional: make mobile dropdown match */
+  .pokemon .navbar-dropdown     { @apply poke-bg !important; }
+}
+
 * {
   margin: 0;
   padding: 0;

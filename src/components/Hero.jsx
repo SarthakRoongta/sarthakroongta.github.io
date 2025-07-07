@@ -2,8 +2,16 @@ import {motion} from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import {styles} from '../styles'
 import { ComputersCanvas } from './canvas';
+import { useContext } from "react";
+import { ThemeContext } from "../theme/ThemeContext";
+
 
 const Hero = () => {
+  const { pokeMode } = useContext(ThemeContext);
+   const subText = pokeMode
+    ? "I design and build full-stack web apps powered by AI and data analytics to bridge technology with business and financial systems (and I really like pokemon)."
+    : "I design and build full-stack web apps powered by AI and data analytics to bridge technology with business and financial systems.";
+
   return (
     <section className = "relative w-full h-screen mx-auto">
       <div className = {`${styles.paddingX} absolute inset-0 top-[120px] flex flex-row items-start gap-5`}>
@@ -14,7 +22,7 @@ const Hero = () => {
         <div>
           <h1 className ={`${styles.heroHeadText} text-white`}>Hi, I'm <span className= "text-[#915eff]"> Sarthak</span></h1>
           <p className = {`${styles.heroSubText} mt-2 text-white-100`}>
-            I design and build full-stack web apps powered by AI and data <br className="sm:block hidden" /> analytics  to bridge technology with business and financial systems.
+            {subText}
           </p>
         </div>
       </div>
