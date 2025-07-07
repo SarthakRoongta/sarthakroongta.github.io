@@ -28,6 +28,8 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import TKD from "./company/TKD.png"
 import rutgers from "./company/rutgers-r.png"
+import arcangel from "./company/arcangel.png"
+
 
 
 import carrent from "./carrent.png";
@@ -69,4 +71,5 @@ export {
   tripguide,
   TKD,
   rutgers,
+  arcangel
 };
