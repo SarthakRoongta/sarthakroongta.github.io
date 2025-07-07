@@ -27,7 +27,8 @@ import {
   startup,
   TKD,
   rutgers,
-  arcangel
+  arcangel,
+  swift,
 } from "../assets";
 
 export const navLinks = [
@@ -89,6 +90,10 @@ const technologies = [
   {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Swift",
+    icon: swift
   },
   // {
   //   name: "Redux Toolkit",
