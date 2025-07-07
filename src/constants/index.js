@@ -30,6 +30,7 @@ import {
   rutgers,
   arcangel,
   swift,
+  target,
 } from "../assets";
 
 export const navLinks = [
@@ -155,7 +156,7 @@ const experiences = [
     iconBg: "#3A9EA8",
     date: "May 2024 - Present",
     points: [
-      "Won $50,000 “Rocket Mixer” pitch competition (NYC, Aug 2024) and secured an Antler accelerator due diligence round ($200,000 under discussion).",
+      "Won $50,000 “Rocket Mixer” pitch competition (NYC, Aug 2025) and secured an Antler accelerator due diligence round ($200,000 under discussion).",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Wrote the technical deck and live-demoed the product to 30+ VCs, helping secure initial prize funding.",
     ],
@@ -164,9 +165,9 @@ const experiences = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Target-Stock-Bot",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web application that enables users to login to a site and track certain items at target. The target items are stored, and when the item comes back online, the user is notified via email.",
     tags: [
       {
         name: "react",
@@ -181,13 +182,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: target,
+    source_code_link: "https://github.com/SarthakRoongta/target-stock-checker",
   },
   {
     name: "Job IT",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "",
     tags: [
       {
         name: "react",

@@ -35,6 +35,7 @@ import arcangel from "./company/arcangel.png"
 
 
 import carrent from "./carrent.png";
+import target from "./target.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import mobilealt from "./mobilealt.png"
@@ -49,6 +50,7 @@ export {
   mobile,
   web,
   github,
+  target,
   menu,
   close,
   css,
