@@ -38,10 +38,12 @@ import carrent from "./carrent.png";
 import target from "./target.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import lingotranslate from "./lingotranslate.png"
 import mobilealt from "./mobilealt.png"
 
 
 export {
+  lingotranslate,
   startup,
   mobilealt,
   logo,

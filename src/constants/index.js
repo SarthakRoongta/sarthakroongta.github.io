@@ -12,6 +12,7 @@ import {
   redux,
   tailwind,
   nodejs,
+  lingotranslate,
   mongodb,
   git,
   figma,
@@ -181,51 +182,63 @@ const projects = [
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "swift",
+        color: "orange-text-gradient",
+      },
     ],
     image: target,
     source_code_link: "https://github.com/SarthakRoongta/target-stock-checker",
   },
   {
-    name: "Job IT",
+    name: "LingoTranslate",
     description:
-      "",
+      "Web application that lets users enter text, and instantly translate it into dozens of languages with AI assistance, and keep a searchable history of every translation for later reuse.",
     tags: [
       {
-        name: "react",
+        name: "flask",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "openai",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "translate-api",
         color: "pink-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "orange-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: lingotranslate,
+    source_code_link: "https://github.com/SarthakRoongta/LingoTranslate",
   },
   {
-    name: "Trip Guide",
+    name: "NL2SQL-Converter",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Takes english requests and converts them into SQL queries, then feeds those commands and queries the database. Allows users with minimal experience to use SQL commands.",
     tags: [
       {
-        name: "nextjs",
+        name: "postgreSQL",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "python",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "spaCy",
         color: "pink-text-gradient",
+      },
+      {
+        name: "ilab",
+        color: "orange-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/SarthakRoongta/NL2SQL-Converter",
   },
 ];
 
