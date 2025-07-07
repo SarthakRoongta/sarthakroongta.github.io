@@ -71,5 +71,5 @@ export {
   tripguide,
   TKD,
   rutgers,
-  arcangel
+  arcangel,
 };
