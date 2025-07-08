@@ -39,6 +39,7 @@ module.exports = {
         "poke11-pattern":"url('/src/assets/pokebg_10.png')",
 
       },
+      
     },
   },
   plugins: [],
