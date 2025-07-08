@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../theme/ThemeContext";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close, pokeball } from "../assets";
+import { logo, pokelogo, pokeball, menu, close } from "../assets";
 
 const Navbar = () => {
   const { pokeMode, togglePokeMode } = useContext(ThemeContext);
@@ -18,10 +18,11 @@ const Navbar = () => {
         onChange={togglePokeMode}
         className="peer sr-only"
       />
+      <div className="absolute inset-0 rounded-full bg-white" />
       <img
         src={pokeball}
-        alt="theme toggle"
-        className="absolute inset-0 h-full w-full object-contain transition-opacity duration-300 peer-checked:opacity-0"
+        alt="toggle"
+        className="relative z-10 h-full w-full object-contain transition-opacity duration-300 peer-checked:opacity-0"
       />
       <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 peer-checked:opacity-100">
         <span className="h-full w-full rounded-full bg-violet-600 border-2 border-white flex items-center justify-center">
@@ -36,7 +37,7 @@ const Navbar = () => {
       className={`
         ${styles.paddingX}
         fixed top-0 z-20 w-full py-5 flex items-center
-        ${pokeMode ? "bg-[#E3350D]" : "bg-primary"} 
+        bg-primary
         navbar
       `}
     >
@@ -49,7 +50,14 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="h-9 w-9 object-contain" />
+          <div className="relative h-9 w-9">
+            <div className="absolute inset-0 rounded-full bg-white" />
+            <img
+              src={pokeMode ? pokelogo : logo}
+              alt="logo"
+              className="relative z-10 h-full w-full object-contain"
+            />
+          </div>
           <p className="flex text-[18px] font-bold text-white cursor-pointer">
             Sarthak&nbsp;Roongta
             <span className="hidden sm:block">
@@ -58,7 +66,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="hidden list-none items-center gap-10 sm:flex">
+        <ul className="hidden sm:flex list-none items-center gap-10">
           {navLinks.map(({ id, title }) => (
             <li
               key={id}
@@ -74,23 +82,23 @@ const Navbar = () => {
           {PokeSwitch}
         </ul>
 
-        <div className="flex items-center gap-4 sm:hidden">
+        <div className="sm:hidden flex items-center gap-4">
           {PokeSwitch}
           <img
             src={open ? close : menu}
             alt="menu"
-            className="h-[28px] w-[28px] cursor-pointer object-contain"
+            className="h-[28px] w-[28px] object-contain cursor-pointer"
             onClick={() => setOpen(!open)}
           />
           <div
             className={`
               ${open ? "flex" : "hidden"}
-              absolute right-0 top-20 z-10 my-2 mx-4 min-w-[140px] rounded-xl p-6
+              absolute top-20 right-0 z-10 my-2 mx-4 min-w-[140px] p-6 rounded-xl
               ${pokeMode ? "bg-[#E3350D]" : "black-gradient"}
               navbar-dropdown
             `}
           >
-            <ul className="flex list-none flex-col gap-4">
+            <ul className="flex flex-col gap-4 list-none">
               {navLinks.map(({ id, title }) => (
                 <li
                   key={id}
