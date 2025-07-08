@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  .poke-bg   { @apply bg-[#CC0000]; }   /* red */
+  .poke-bg   { @apply bg-[#f73322]; }   /* red */
   .poke-text { @apply text-[#2A75BB]; } /* blue */
 
   /* ---- Pokémon theme overrides ---- */
@@ -13,7 +13,18 @@
   .pokemon nav.navbar *         { @apply text-white; }   /* links, icons, etc. */
 
   /* optional: make mobile dropdown match */
-  .pokemon .navbar-dropdown     { @apply poke-bg !important; }
+  .pokemon .navbar-dropdown  
+  
+  { @apply poke-bg !important; }
+
+  .overlay-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0 0 0 / 0.15); /* darken / desaturate 15 % */
+    mix-blend-mode: multiply;             /* keeps reds in harmony */
+    pointer-events: none;
+  }
 }
 
 * {
@@ -52,6 +63,26 @@
     -90deg,
     #804dee 0%,
     rgba(60, 51, 80, 0) 100%
+  );
+}
+
+.blue-gradient {
+  background: #0073ff;
+  background: linear-gradient(-90deg, #0073ff 0%, rgba(0, 44, 102, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #0073ff 0%,
+    rgba(0, 44, 102, 0) 100%
+  );
+}
+
+.red-gradient {
+  background: #e3350d;
+  background: linear-gradient(-90deg, #e3350d 0%, rgba(227, 53, 13, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #e3350d 0%,
+    rgba(227, 53, 13, 0) 100%
   );
 }
 

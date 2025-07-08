@@ -5,7 +5,7 @@ const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
     <Html>
-      <span className="canvas-loader" />               {/* spinner div */}
+      <span className="canvas-loader" />              
       <p style={{
         fontSize: 14,
         color: "#f1f1f1", 
