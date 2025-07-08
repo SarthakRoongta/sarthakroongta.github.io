@@ -25,13 +25,13 @@ const Hero = () => {
             }`} />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} ${pokeMode ? "text-black" : "text-white"}`}>
+          <h1 className={`${styles.heroHeadText} ${pokeMode ? "text-primary" : "text-white"}`}>
             Hi, I'm{" "}
             <span className={pokeMode ? "text-[#f73322]" : "text-[#915eff]"}>
               Sarthak
             </span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 ${pokeMode ? "text-black" : "text-white"}`}>
+          <p className={`${styles.heroSubText} mt-2 ${pokeMode ? "text-primary" : "text-white"}`}>
             {subText}
           </p>        
           </div>

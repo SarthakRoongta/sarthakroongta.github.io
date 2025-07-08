@@ -19,7 +19,7 @@ const AppContent = () => {
 
   return (
     <BrowserRouter>
-      <div className={`relative z-0 ${pokeMode ? "bg-white" : "bg-primary"}`}>
+      <div className={`relative z-0 ${pokeMode ? "bg-[#fcfbfc]" : "bg-primary"}`}>
         <div
           className={`relative bg-cover bg-no-repeat ${
             pokeMode
