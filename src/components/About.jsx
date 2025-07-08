@@ -6,6 +6,10 @@ import {fadeIn, textVariant} from '../utils/motion';
 import { SectionWrapper } from '../hoc'
 import { useContext } from 'react';
 import { ThemeContext } from '../theme/ThemeContext';
+
+
+
+
 const ServiceCard = ({ index, title, icon }) => {
   const { pokeMode } = useContext(ThemeContext);
 
