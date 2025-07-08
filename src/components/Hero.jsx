@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { useContext } from "react";
 import { ThemeContext } from "../theme/ThemeContext";
-import { ComputersCanvas } from "./canvas";
-import RoomCanvas from "./canvas/Room"; 
+import { ComputersCanvas, RoomCanvas } from "./canvas";
 const Hero = () => {
   const { pokeMode } = useContext(ThemeContext);
 

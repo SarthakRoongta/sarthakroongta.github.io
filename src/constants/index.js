@@ -126,18 +126,18 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Senior Taekwondo Instructor",
-    company_name: "Black K. Taekwondo",
-    icon: TKD,
-    iconBg: "#ffffff",
-    date: "Jan 2022 - June 2023",
+    title: "Co Founder",
+    company_name: "Arcangel",
+    icon: arcangel,
+    iconBg: "#3A9EA8",
+    date: "May 2024 - Present",
     points: [
-      
-      "Lead regular classes through warmups and stretching, as well as individually correcting students on form throughout classes.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Collaborating with Adapted teaching techniques to accommodate students of various ages and skill levels, ensuring apositive and eﬀective learning environment.",
+      "Won $50,000 “Rocket Mixer” pitch competition (NYC, Aug 2025) and secured an Antler accelerator due diligence round ($200,000 under discussion).",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Wrote the technical deck and live-demoed the product to 30+ VCs, helping secure initial prize funding.",
     ],
   },
+  
   {
     title: "Undergraduate Research Assistant",
     company_name: "Rutgers Computer Science Department",
@@ -151,15 +151,16 @@ const experiences = [
     ],
   },
   {
-    title: "Co Founder",
-    company_name: "Arcangel",
-    icon: arcangel,
-    iconBg: "#3A9EA8",
-    date: "May 2024 - Present",
+    title: "Senior Taekwondo Instructor",
+    company_name: "Black K. Taekwondo",
+    icon: TKD,
+    iconBg: "#ffffff",
+    date: "Jan 2022 - June 2023",
     points: [
-      "Won $50,000 “Rocket Mixer” pitch competition (NYC, Aug 2025) and secured an Antler accelerator due diligence round ($200,000 under discussion).",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Wrote the technical deck and live-demoed the product to 30+ VCs, helping secure initial prize funding.",
+      
+      "Lead regular classes through warmups and stretching, as well as individually correcting students on form throughout classes.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Collaborating with Adapted teaching techniques to accommodate students of various ages and skill levels, ensuring apositive and eﬀective learning environment.",
     ],
   },
 ];

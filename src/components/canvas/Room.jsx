@@ -13,10 +13,10 @@ const Loader = () => {
 };
 
 const desktop = { camera: [0, 2.8, 30] };
-const mobile = { camera: [0, 2.4,20] };
+const mobile = { camera: [-10, 10, 70] };
 
-const desktopModel = { pos: [0, -1.6, 0], rot: [0, -0.8, 0], scale: 1.3 };
-const mobileModel  = { pos: [0, -1.6, 0], rot: [0, -0.8, 0], scale: 1.1 };
+const desktopModel = { pos: [0, -2.6, 0], rot: [0, -0.8, 0], scale: 1.3 };
+const mobileModel  = { pos: [0, -3.6, 0], rot: [0, -0.8, 0], scale: 1.1 };
 
 const Room = ({ model }) => {
   const { scene } = useGLTF("/pokemon_room/scene.gltf");
