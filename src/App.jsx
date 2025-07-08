@@ -23,7 +23,7 @@ const AppContent = () => {
         <div
           className={`relative bg-cover bg-no-repeat ${
             pokeMode
-              ? "bg-poke11-pattern bg-[center_440px]"
+              ? "bg-poke11-pattern bg-[center_400px]"
               : "bg-hero-pattern bg-center"
           }`}
         >

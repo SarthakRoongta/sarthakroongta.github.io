@@ -15,7 +15,7 @@ const Loader = () => {
 const desktop = { camera: [-3, 2.8, 33] };
 const mobile = { camera: [-10, 10, 70] };
 
-const desktopModel = { pos: [-0.5, -2.6, 0], rot: [0, -0.8, 0], scale: 1.3 };
+const desktopModel = { pos: [-0.5, -3.3, 0], rot: [0, -0.8, 0], scale: 1.3 };
 const mobileModel  = { pos: [0, -3.6, 0], rot: [0, -0.8, 0], scale: 1.1 };
 
 const Room = ({ model }) => {

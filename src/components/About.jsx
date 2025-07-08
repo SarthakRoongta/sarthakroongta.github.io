@@ -4,7 +4,10 @@ import {styles} from "../styles"
 import { services } from '../constants'
 import {fadeIn, textVariant} from '../utils/motion';
 import { SectionWrapper } from '../hoc'
+import { useContext } from 'react';
+import { ThemeContext } from '../theme/ThemeContext';
 const ServiceCard = ({index, title, icon}) => {
+  const { pokeMode } = useContext(ThemeContext)
   return(
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
@@ -28,18 +31,19 @@ const ServiceCard = ({index, title, icon}) => {
 }
 
 const About = () => {
+  const { pokeMode } = useContext(ThemeContext)
   return (
     <>
       <motion.div variants = {textVariant()}>
-        <p className={styles.sectionSubText}
+        <p className={`${styles.sectionSubText} ${pokeMode ? "!text-[#8c82fc]": "text-secondary"}`}
         >Introduction</p>
-        <h2 className={styles.sectionHeadText}
+        <h2 className={`${styles.sectionHeadText} ${pokeMode ? "text-poke_red": "text-white"}`}
         >Overview</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("","",0.1,1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className={`mt-4 text-[17px] max-w-3xl leading-[30px] ${pokeMode ? "text-[#8c82fc]": "text-white"}`}
       >
         I’m a Computer Science & Mathematics major who loves turning everyday problems 
         into working software. My toolkit ranges from Python, Java, C/C++, SQL and Swift to HTML, 
