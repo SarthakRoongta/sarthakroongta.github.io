@@ -25,7 +25,7 @@ const Hero = () => {
             }`} />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} ${pokeMode ? "text-primary" : "text-white"}`}>
+          <h1 className={`${pokeMode ? "text-black" : "text-white"} ${styles.heroHeadText}`}>
             Hi, I'm{" "}
             <span className={pokeMode ? "text-[#f73322]" : "text-[#915eff]"}>
               Sarthak
