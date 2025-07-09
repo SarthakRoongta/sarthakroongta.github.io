@@ -42,10 +42,10 @@ return (
 
             {pokeMode ? (
               <div className="bg-white border-[3px] border-white shadow-inner rounded-md p-2 w-[90px] h-[90px] flex items-center justify-center">
-                <img src={icon} alt={title} className="w-[60px] h-[60px] object-contain" />
+                <img src={icon} alt={title} className="w-[90px] h-[90px] object-contain" />
               </div>
             ) : (
-              <img src={icon} alt={title} className="w-[60px] h-[60px] object-contain" />
+              <img src={icon} alt={title} className="w-[90px] h-[90px] object-contain" />
             )}
           <h3 className={`${pokeMode ? "text-poke_red" : "text-white"} text-[18px] font-extrabold text-center mt-4`}>
             {title}
