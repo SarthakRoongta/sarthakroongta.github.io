@@ -26,9 +26,13 @@ import arcangel from "./company/arcangel.png";
 import target from "./target.png";
 import lingotranslate from "./lingotranslate.png";
 import mobilealt from "./mobilealt.png";
+import arrowWhite from "./white-arrow.png"
+import arrowRed from "./red-arrow.png"
 
 export {
+  arrowRed,
   lingotranslate,
+  arrowWhite,
   nl2,
   pokelogo,
   pokeball,
