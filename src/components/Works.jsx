@@ -1,5 +1,3 @@
-// src/components/Works.jsx
-
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { useContext } from "react";
@@ -48,6 +46,21 @@ const ProjectCard = ({
             <div className="w-3 h-3 bg-red-500 border border-black rounded-full" />
             <div className="w-3 h-3 bg-yellow-300 border border-black rounded-full" />
             <div className="w-3 h-3 bg-green-400 border border-black rounded-full" />
+          </div>
+        )}
+
+        {!pokeMode && (
+          <div className="absolute top-2 left-2 z-10">
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="w-12 h-12 bg-tertiary border-2 border-black rounded-full flex items-center justify-center cursor-pointer shadow-md"
+            >
+              <img
+                src={github}
+                alt="GitHub"
+                className="w-[60%] h-[60%] object-contain"
+              />
+            </div>
           </div>
         )}
 
