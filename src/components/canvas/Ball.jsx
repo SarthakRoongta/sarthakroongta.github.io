@@ -19,7 +19,6 @@ const Ball = ({ imgUrl, pokeMode }) => {
       <ambientLight intensity={0.4} />
       <directionalLight position={[0, 0, 0.1]} />
 
-      {/* Standard ball when not in pokeMode */}
       {!pokeMode && (
         <mesh castShadow receiveShadow scale={2.75}>
           <icosahedronGeometry args={[1, 1]} />
@@ -39,20 +38,18 @@ const Ball = ({ imgUrl, pokeMode }) => {
         </mesh>
       )}
 
-      {/* Pokéball in pokeMode */}
       {pokeMode && (
         <>
-          {/* Top hemisphere (red) with logo decal placed above the ring */}
           <mesh castShadow receiveShadow scale={2.75}>
             <sphereGeometry
               args={[
-                1,           // radius
-                64,          // widthSegments
-                64,          // heightSegments
-                0,           // phiStart
-                2 * Math.PI, // phiLength
-                0,           // thetaStart (north pole)
-                Math.PI / 2, // down to equator
+                1,           
+                64,          
+                64,          
+                0,           
+                2 * Math.PI, 
+                0,          
+                Math.PI / 2, 
               ]}
             />
             <meshStandardMaterial
@@ -61,7 +58,6 @@ const Ball = ({ imgUrl, pokeMode }) => {
               polygonOffsetFactor={-5}
               flatShading
             />
-            {/* move logo up onto the red half (y = 0.5, z ≈ 0.866 sits on the sphere surface) */}
             <Decal
               position={[0, 0.5, 0.866]}
               rotation={[2 * Math.PI, 0, 6.25]}
@@ -74,7 +70,6 @@ const Ball = ({ imgUrl, pokeMode }) => {
             />
           </mesh>
 
-          {/* Bottom hemisphere (white) */}
           <mesh castShadow receiveShadow scale={2.75}>
             <sphereGeometry
               args={[
@@ -83,8 +78,8 @@ const Ball = ({ imgUrl, pokeMode }) => {
                 64,
                 0,
                 2 * Math.PI,
-                Math.PI / 2,  // start at equator
-                Math.PI / 2,  // down to south pole
+                Math.PI / 2,  
+                Math.PI / 2, 
               ]}
             />
             <meshStandardMaterial
@@ -95,7 +90,6 @@ const Ball = ({ imgUrl, pokeMode }) => {
             />
           </mesh>
 
-          {/* Black equator ring */}
           <mesh
             position={[0, 0, 0]}
             rotation={[Math.PI / 2, 0, 0]}
@@ -106,7 +100,6 @@ const Ball = ({ imgUrl, pokeMode }) => {
             <meshStandardMaterial color="#000000" />
           </mesh>
 
-          {/* Pokéball button */}
           <mesh position={[0, 0, 1.01]} scale={2.75} renderOrder={1}>
             <circleGeometry args={[0.12, 32]} />
             <meshStandardMaterial color="#000000" />

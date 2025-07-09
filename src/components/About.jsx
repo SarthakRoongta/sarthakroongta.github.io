@@ -72,6 +72,7 @@ return (
             <div className="w-5 h-5 rounded-full bg-cyan-400 border-[2.5px] border-black" />
             <div className="w-2.5 h-2.5 rounded-full bg-yellow-300 border-[1.5px] border-black" />
             <div className="w-2.5 h-2.5 rounded-full bg-red-500 border-[1.5px] border-black" />
+            <div className="w-2.5 h-2.5 rounded-full bg-green-400 border-[1.5px] border-black" />
           </div>
 
           <div className="absolute bottom-2 w-full flex justify-center">
