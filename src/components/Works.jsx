@@ -33,7 +33,6 @@ const ProjectCard = ({
         options={commonTiltOptions}
         className="xs:w-[360px] w-full h-[580px] relative"
       >
-        {/* Top-left GitHub + lights */}
         {pokeMode && (
           <div className="absolute top-2 left-2 flex items-center space-x-1 z-10">
             <div
@@ -52,7 +51,6 @@ const ProjectCard = ({
           </div>
         )}
 
-        {/* Card body */}
         <div
           className={`flex flex-col h-full p-5 ${
             pokeMode
@@ -60,8 +58,7 @@ const ProjectCard = ({
               : "bg-tertiary rounded-2xl"
           }`}
         >
-          {/* Screenshot, shifted downward */}
-          <div className="w-full h-[230px] overflow-hidden rounded-md mt-8">
+          <div className="w-full h-full overflow-hidden rounded-md mt-10">
             <img
               src={image}
               alt={name}
@@ -69,7 +66,6 @@ const ProjectCard = ({
             />
           </div>
 
-          {/* Title & description */}
           <div className="mt-5 flex-1">
             <h3
               className={`font-bold text-[24px] ${
@@ -87,7 +83,6 @@ const ProjectCard = ({
             </p>
           </div>
 
-          {/* Colored hashtags */}
           <div className="mt-auto pt-4 flex flex-wrap gap-2">
             {tags.map((tag) => (
               <p key={tag.name} className={`text-[14px] ${tag.color}`}>
@@ -97,7 +92,6 @@ const ProjectCard = ({
           </div>
         </div>
 
-        {/* Bottom-right D-Pad */}
         {pokeMode && (
           <div className="absolute bottom-3 right-3 w-[40px] h-[40px] flex justify-center items-center">
             <div className="relative w-[30px] h-[30px]">
