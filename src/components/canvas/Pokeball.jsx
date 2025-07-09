@@ -13,7 +13,6 @@ const Pokeball = () => {
   return (
     <primitive
       object={scene}
-      // try 1 or 2 here instead of 100
       scale={110}
       position={[0, 0, 0]}
       rotation={[0, 0, 0]}
@@ -35,7 +34,6 @@ const PokeballCanvas = () => {
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        {/* allow the ball to slowly spin */}
         <OrbitControls
           autoRotate
           autoRotateSpeed={1.2}
@@ -44,19 +42,15 @@ const PokeballCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
 
-        {/* basic fill light */}
         <ambientLight intensity={0.3} />
 
-        {/* bright key light */}
         <directionalLight
           position={[5, 5, 5]}
           intensity={1.2}
           castShadow
         />
 
-        {/* studio‐style HDR environment for reflections */}
         <Environment
-          // You can swap this for "sunset", "city", "park", etc.
           preset="studio"
           background={false}
         />
