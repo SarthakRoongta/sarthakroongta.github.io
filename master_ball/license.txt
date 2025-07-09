@@ -1,0 +1,11 @@
+Model Information:
+* title:	Master Ball
+* source:	https://sketchfab.com/3d-models/master-ball-642c494890484ba9be4c628b67e33eb2
+* author:	danielsive (https://sketchfab.com/danielsive)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Master Ball" (https://sketchfab.com/3d-models/master-ball-642c494890484ba9be4c628b67e33eb2) by danielsive (https://sketchfab.com/danielsive) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
