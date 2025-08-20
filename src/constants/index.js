@@ -124,7 +124,7 @@ const experiences = [
     date: "August 2025 - Present",
     points: [
       "Designed backend infrastructure for automated resume processing, supporting concurrent document parsing requests with minimal latency.",
-      "IBuilt RESTful endpoints for resume upload, processing, and retrieval, integrating authentication and access control layers.",
+      "Built RESTful endpoints for resume upload, processing, and retrieval, integrating authentication and access control layers.",
       "Optimized document processing pipeline to reduce average request time by 35% through caching strategies and asynchronous task execution.",
       "Deployed services to AWS with containerized builds, ensuring high availability and scalability under variable workloads.",
     ],
