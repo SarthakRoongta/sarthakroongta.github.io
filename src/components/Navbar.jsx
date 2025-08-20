@@ -61,7 +61,7 @@ const Navbar = () => {
           <p className="flex text-[18px] font-bold text-white cursor-pointer">
             Sarthak&nbsp;Roongta
             <span className="hidden sm:block">
-              &nbsp;|&nbsp;{pokeMode ? "Pokédex" : "Personal Website"}
+              &nbsp;|&nbsp;{pokeMode ? "Projectdex" : "Personal Website"}
             </span>
           </p>
         </Link>
