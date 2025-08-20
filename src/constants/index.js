@@ -21,6 +21,7 @@ import {
   arcangel,
   swift,
   target,
+  recruitRyte,
 } from "../assets";
 
 export const navLinks = [
@@ -115,11 +116,26 @@ const technologies = [
 
 const experiences = [
   {
+    
+    title: "Software Engineer Intern ",
+    company_name: "recruitRyte",
+    icon: recruitRyte,
+    iconBg: "#5f35ef",
+    date: "August 2025 - Present",
+    points: [
+      "Designed backend infrastructure for automated resume processing, supporting concurrent document parsing requests with minimal latency.",
+      "IBuilt RESTful endpoints for resume upload, processing, and retrieval, integrating authentication and access control layers.",
+      "Optimized document processing pipeline to reduce average request time by 35% through caching strategies and asynchronous task execution.",
+      "Deployed services to AWS with containerized builds, ensuring high availability and scalability under variable workloads.",
+    ],
+  },
+  {
+    
     title: "Co Founder",
     company_name: "Arcangel",
     icon: arcangel,
     iconBg: "#3A9EA8",
-    date: "May 2024 - Present",
+    date: "May 2024 - August 2025",
     points: [
       "Won $50,000 “Rocket Mixer” pitch competition (NYC, Aug 2025) and secured an Antler accelerator due diligence round ($200,000 under discussion).",
       "Implementing responsive design and ensuring cross-browser compatibility.",

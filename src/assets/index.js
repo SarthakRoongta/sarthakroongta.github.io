@@ -28,8 +28,9 @@ import lingotranslate from "./lingotranslate.png";
 import mobilealt from "./mobilealt.png";
 import arrowWhite from "./white-arrow.png"
 import arrowRed from "./red-arrow.png"
-
+import recruitRyte from "./company/recruitryte_logo.png"
 export {
+  recruitRyte,
   arrowRed,
   lingotranslate,
   arrowWhite,
